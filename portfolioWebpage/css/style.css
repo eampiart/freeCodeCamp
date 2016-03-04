@@ -1,0 +1,118 @@
+body {
+  color: white;
+  padding-top: 50px;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.section {
+  position: relative;
+  padding: 15vw 5vw;
+  text-align: center;
+}
+
+#home {
+  background-color: #F44336;
+}
+
+.buttons:before {
+  content: "";
+  display: block;
+  border-top: 1px solid white;
+  height: 1px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.btn {
+  color: #F44336;
+  font-weight: 700;
+  font-size: 1.3em;
+  border: none;
+  margin-bottom: 5px;
+}
+
+.btn:hover {
+  background-color: #F44336;
+  color: white;
+}
+
+#about {
+  background-color: #9C27B0;
+}
+
+#about p {
+  margin: 5vh auto;
+}
+
+#about img {
+  border-radius: 50%;
+  border: 1vw solid white;
+}
+
+#portfolio {
+  background-color: #009688;
+}
+
+#portfolio a {
+  color: white;
+}
+
+#portfolio a:hover {
+  text-decoration: underline;
+}
+
+#portfolio h4 {
+  margin: 10px auto 30px auto;
+  font-weight: 300;
+}
+
+#portfolio .title {
+  display: block;
+  font-weight: 600;
+}
+
+#portfolio .sub {
+  font-weight: 300;
+  font-size: 0.95em;
+}
+
+#contact {
+  background-color: #3F51B5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: #E91E63;
+  padding: 20px 5%;
+  text-align: center;
+  color: white;
+  font-weight: lighter;
+}
+
+footer a {
+  color: white;
+}
+
+@media all and (max-width: 767px) {
+  #portfolio .col-sm-4 {
+    margin-bottom: 5vw;
+  }
+  .section {
+    padding: 20vw 5vw;
+  }
+}
