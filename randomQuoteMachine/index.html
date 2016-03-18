@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>freeCodeCamp - Random Quote Machine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Raleway:600,400,200italic'>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <body ng-app="randomQuoteMachine" ng-controller="MainCtrl" ng-init="getQuote()" ng-style="style">
+  <div class="quote-box">
+    <p class="quote" ng-cloak><i class="fa fa-quote-left fa-2x"></i>{{quote.quote}}</p>
+    <span class="author" ng-cloak>{{quote.author}}</span>
+    <div class="btns">
+      <a class="tweet" ng-href="https://twitter.com/intent/tweet?text={{encodedQuote}}"><button ng-style="style" class="btn"><i class="fa fa-twitter"></i></button></a>
+      <button ng-style="style" class="btn" ng-click="getQuote()">Get new quote</button>
+    </div>
+  </div>
+</body>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+<script src='https://platform.twitter.com/widgets.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
