@@ -1,0 +1,86 @@
+body {
+  font-family: Raleway, sans-serif;
+  background-color: #CFD8DC;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+body * {
+/*   border: 1px solid red; */
+}
+
+.results {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  width: 80%;
+  max-width: 860px;
+}
+
+.result {
+  padding: 20px;
+  margin: 5px 0;
+  width: 100%;
+  background-color: #607D8B;
+  color: white;
+  border-radius: 5px;
+}
+
+.result:first-of-type {
+  margin-top: 0;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.result:hover, .result:focus {
+  background-color: #C2185B;
+  color: white;
+  text-decoration: none;
+}
+
+.btn, .btn:focus {
+  background-color: #C2185B;
+  border-color: #C2185B;
+}
+
+p {
+  margin: 0;
+}
+
+.search {
+  margin: 20px 0 5px 0; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.random {
+  margin-right: 20px;
+}
+
+.form-control {
+  height: 46px;
+  max-width: 80vw;
+  font-size: 1.3em;
+}
