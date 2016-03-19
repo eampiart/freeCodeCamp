@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='http://jtblin.github.io/angular-chart.js/dist/angular-chart.css'>
+<link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css'>
+<link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Raleway:400,200,600''>
+
+        <link rel="stylesheet" href="css/style.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <body ng-app="weatherApp" ng-controller="MainCtrl" ng-init="getWeather()" ng-cloak>
+  <i ng-click="changeUnits()" ng-show="units === 'us'" class="units wi wi-celsius"></i>
+  <i ng-click="changeUnits()" ng-show="units === 'si'" class="units wi wi-fahrenheit"></i>
+  <div class="content">
+    <span ng-show="!location && !weather" class="location">Getting location...</span>
+    <span ng-show="!weather && location" class="location">Loading weather...</span>
+    
+    <span ng-show="weather" class="currently">
+      Feels like: {{weather.currently.apparentTemperature}}
+      <span ng-hide="units === 'us'">°C</span>
+      <span ng-hide="units === 'si'">°F</span>
+    </span>
+    
+    <i ng-show="weather" class="current-condition wi {{weather.currently.icon | weatherIcon}}"></i>
+  </div>
+  <div id="chart">
+    <canvas id="line" class="chart chart-line" chart-data="data" chart-labels="labels" chart-legend="false" chart-series="series" chart-options="options">
+    </canvas>
+  </div>
+</body>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/angular-chart.js/0.8.8/angular-chart.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
