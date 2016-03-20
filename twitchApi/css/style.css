@@ -1,0 +1,74 @@
+body {
+  padding-top: 20px;
+}
+
+a {
+  color: #6441a5;
+}
+
+a:hover {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  padding-top: 20px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.streaming {
+  background-color: #6441a5;
+  color: white;
+}
+
+.username {
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.status {
+  margin-left: auto;
+}
+
+.status-detail {
+  display: none;
+  padding-left: 5px;
+}
+
+.twitchLogo {
+  text-align: center;
+  fill: #6441a5;
+}
+
+.col {
+  padding: 0;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  border: 4px solid white;
+  width: 50px;
+  height: 50px;
+}
+
+@media (min-width: 768px) {
+  li {
+    border-radius: 5px;
+  }
+
+  .status-detail {
+    display: inline;
+  }
+
+  .game::after {
+    content: ":";
+  }
+}
