@@ -211,3 +211,27 @@ function primes(n) {
 function sumPrimes(num) {
     return primes(num).reduce(function(sum,c){return sum+c;});
 }
+
+// Find the smallest common multiple of the provided parameters that can be evenly divided by both, as well as by all sequential numbers in the range between these parameters.
+// The range will be an array of two numbers that will not necessarily be in numerical order.
+// e.g. for 1 and 3 - find the smallest common multiple of both 1 and 3 that is evenly divisible by all numbers between 1 and 3.
+function smallestCommons(arr) {
+    var max = Math.max(arr[0],arr[1]);
+    var min = Math.min(arr[0],arr[1]);
+    var array = Array.apply(null, Array(max-min+1)).map(function (_, i) {return i+min;});
+    var n = min;
+
+    while (true) {
+        var m = array.reduce(function(b,c) {
+            if (n % c === 0) {
+                return b && c;
+            }
+        },true);
+        if (m) { return n; }
+        n++;
+    }
+}
+
+// Testing smallestCommons
+console.log(smallestCommons([1,5]));
+console.log(smallestCommons([1,5]) === 60);
