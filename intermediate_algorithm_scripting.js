@@ -263,3 +263,24 @@ function drop(arr, f) {
 // console.log(drop([1, 2, 3], function(n) {return n < 3; }));
 // console.log(drop([1, 2, 3, 4], function(n) {return n >= 3;}));
 // console.log(drop([1, 2, 3, 4], function(n) {return n >= 3;}) === [3, 4]);
+
+//Flatten a nested array. You must account for varying levels of nesting.
+function steamroller(array) {
+    // I'm a steamroller, baby
+    var arr = [];
+    function steam (p,sum) {
+        if (!Array.isArray(p)) {
+            console.log("element: " + p);
+            arr.push(p);
+            return p;
+        } else {
+            p.map(steam);
+        }
+    }
+
+    steam(array);
+    return arr;
+}
+
+// Testing steamroller
+// console.log(steamroller([1, [2], [3, [[4]]]]));
