@@ -247,3 +247,19 @@ function find(arr, f) {
 // Testing find
 // console.log(find([1, 2, 3, 4], function(num){ return num % 2 === 0; }));
 // console.log(find([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }) === 8);
+
+// Drop the elements of an array (first argument), starting from the front, until the predicate (second argument) returns true.
+// Return the rest of the array, otherwise return an empty array.
+function drop(arr, f) {
+    // Drop them elements.
+    return arr.reduce(function(a,c){
+        if (a.length > 0) { a.push(c); return a; }
+        if (f(c)) { a.push(c); return a; }
+        return a;
+    },[]);
+}
+
+// Testing drop
+// console.log(drop([1, 2, 3], function(n) {return n < 3; }));
+// console.log(drop([1, 2, 3, 4], function(n) {return n >= 3;}));
+// console.log(drop([1, 2, 3, 4], function(n) {return n >= 3;}) === [3, 4]);
