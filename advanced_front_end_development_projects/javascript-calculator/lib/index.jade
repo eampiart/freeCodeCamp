@@ -1,0 +1,29 @@
+div.calculator(ng-app="calcApp", ng-controller="MainCtrl", ng-cloak)
+  div.row.runner {{ runnerString }}
+  div.row
+    div.op#clear(ng-click="clear()") C
+    div
+    div
+    div.op#divide(ng-click="updateRunnerString($event)") /
+  div.row
+    div.no#no7(ng-click="updateRunnerString($event)") 7
+    div.no#no8(ng-click="updateRunnerString($event)") 8
+    div.no#no9(ng-click="updateRunnerString($event)") 9
+    div.op#multiply(ng-click="updateRunnerString($event)") *
+  div.row
+    div.no#no4(ng-click="updateRunnerString($event)") 4
+    div.no#no5(ng-click="updateRunnerString($event)") 5
+    div.no#no6(ng-click="updateRunnerString($event)") 6
+    div.op#subtract(ng-click="updateRunnerString($event)") -
+  div.row
+    div.no#no1(ng-click="updateRunnerString($event)") 1
+    div.no#no2(ng-click="updateRunnerString($event)") 2
+    div.no#no3(ng-click="updateRunnerString($event)") 3
+    div.op#add(ng-click="updateRunnerString($event)") +
+  div.row
+    div.no#no0(ng-click="updateRunnerString($event)") 0
+    div
+    div#dot(ng-click="updateRunnerString($event)") .
+    div.op#equal(ng-click="equals()") =
+
+  div.footer Designed for mobile first, with specifically iOS Safari in mind

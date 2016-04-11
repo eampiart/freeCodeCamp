@@ -1,0 +1,88 @@
+// ---------- Variables ---------- //
+$red: #f00;
+$blue: #00f;
+
+// ---------- Basic Layout ---------- //
+body {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  overflow: scroll;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid $red;
+
+  flex-wrap: wrap;
+
+  * {
+    border: 1px solid $blue;
+  }
+}
+
+.row {
+  display: flex;
+
+  flex-basis: 5vh;
+  flex-grow: 1;
+
+  div {
+    font-size: 2em;
+
+    flex-basis: 20vw;
+    flex-grow: 1;
+  }
+
+  div,
+  &.runner {
+    display: flex;
+
+    min-height: 4vw;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.runner {
+    overflow: hidden;
+
+    font-size: 2em;
+
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+}
+
+.footer {
+  display: none;
+}
+
+// ---------- Large desktops: simulate iPhone size ---------- //
+@media (min-width: 1025px) {
+  .footer {
+    display: block;
+
+    text-align: center;
+
+    font-weight: 200;
+    font-style: italic;
+  }
+
+  .calculator {
+    width: 375px;
+    height: 667px;
+  }
+}
