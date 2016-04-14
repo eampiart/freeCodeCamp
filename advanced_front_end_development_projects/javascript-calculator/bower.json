@@ -2,9 +2,7 @@
   "name": "javascript-calculator",
   "description": "",
   "main": "index.html",
-  "authors": [
-    "Petra Donka"
-  ],
+  "authors": ["Petra Donka"],
   "license": "MIT",
   "homepage": "https://github.com/eampiart/freeCodeCamp",
   "private": true,

@@ -1,8 +1,12 @@
-// ---------- Variables ---------- //
+/* ==========================
+  Variables
+========================== */
 $red: #f00;
 $blue: #00f;
 
-// ---------- Basic Layout ---------- //
+/* ==========================
+  Basic Layout
+========================== */
 body {
   position: fixed;
   top: 0;
@@ -70,7 +74,9 @@ body {
   display: none;
 }
 
-// ---------- Large desktops: simulate iPhone size ---------- //
+/* ==========================
+  Large desktops: simulate iPhone size
+========================== */
 @media (min-width: 1025px) {
   .footer {
     display: block;
